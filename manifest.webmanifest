@@ -1,0 +1,17 @@
+{
+  "name": "พูดจีนทันที",
+  "short_name": "พูดจีนทันที",
+  "description": "ค้นหาประโยคภาษาไทย แล้วให้โทรศัพท์พูดภาษาจีนออกเสียงทันที",
+  "lang": "th",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F8FA",
+  "theme_color": "#0F9F8F",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
