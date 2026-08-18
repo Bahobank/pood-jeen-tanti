@@ -1,5 +1,5 @@
 /* พูดจีนทันที — service worker: offline-first app shell */
-const CACHE = 'pjt-v1'
+const CACHE = 'pjt-v3'
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png']
 
 self.addEventListener('install', (e) => {
@@ -20,6 +20,9 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return
   const url = new URL(req.url)
   const sameOrigin = url.origin === self.location.origin
+
+  // ปล่อยคำขอข้ามโดเมนผ่านไปตรง ๆ (เช่น ดาวน์โหลดไฟล์เสียง) ไม่ให้ SW ไปยุ่ง
+  if (!sameOrigin) return
 
   if (req.mode === 'navigate') {
     e.respondWith(
