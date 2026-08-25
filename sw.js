@@ -1,5 +1,5 @@
 /* พูดจีนทันที — service worker: offline-first app shell */
-const CACHE = 'pjt-v4'
+const CACHE = 'pjt-v5'
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png']
 
 self.addEventListener('install', (e) => {
